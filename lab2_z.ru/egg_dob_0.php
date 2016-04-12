@@ -1,5 +1,5 @@
-<?php
-header ("Location: egg.php");
+﻿<?php
+
 $date=trim($_REQUEST['dates']);
 $kol=trim($_REQUEST["kol"]);
 $ed_izmer=trim($_REQUEST["izmer"]);

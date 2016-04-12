@@ -15,7 +15,11 @@ $select=mysql_select_db($mysql_db) or die("БД с таким именем не 
          <head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><title>Личный кабинет пользователя</title></head>
 		  <body>
 		     <div  align='center' style='background:white; width:900px; height:30 px;'>
-		        <p align='center'>Таблица "Яица" <font color="red"><?php echo $answer_pass['login'];?></font></p>
+		        <button name="main_back" style="background: #fdeaa8; width: 430px; height: 20px; border-radius: 5px; box-shadow: 0px 1px 3px; font-size: 14px;"><a href="back_main.php">Вернуться на стартовую страницу</a></button>
+			
+				<button name="main_back" style="background: #fdeaa8; width: 430px; height: 20px; border-radius: 5px; box-shadow: 0px 1px 3px; font-size: 14px;"><a href="logout.php">Выйти</a></a></button>
+				  <br>	  <br>	  <br>	
+				<p align='center'>Таблица "Яица" <font color="red"><?php echo $answer_pass['login'];?></font></p>
 		        <table border="1">
 				<tr><td>id</td><td>Дата</td><td>Количество</td><td>Единица измерения</td></tr>
 				<?php

@@ -15,8 +15,13 @@ $select=mysql_select_db($mysql_db) or die("БД с таким именем не 
          <head><meta http-equiv="Content-Type" content="text/html; charset=utf8"><title>Личный кабинет пользователя</title></head>
 		  <body>
 		     <div  align='center' style='background:white; width:900px; height:30 px;'>
-		        <p align='center'>Таблица "Корм" <font color="red"><?php echo $answer_pass['login'];?></font></p>
-		        <table border="1">
+		        <button name="main_back" style="background: #fdeaa8; width: 430px; height: 20px; border-radius: 5px; box-shadow: 0px 1px 3px; font-size: 14px;"><a href="back_main.php">Вернуться на стартовую страницу</a></button>
+			
+				<button name="main_back" style="background: #fdeaa8; width: 430px; height: 20px; border-radius: 5px; box-shadow: 0px 1px 3px; font-size: 14px;"><a href="logout.php">Выйти</a></a></button>
+				  <br>	  <br>	  <br>	
+				<p align='center'>Таблица "Корм" <font color="red"><?php echo $answer_pass['login'];?></font></p>
+		        
+				<table border="1">
 				<tr><td>id</td><td>Наименование корма</td><td>Количество</td><td>Единица измерения</td></tr>
 				<?php
 				  $feeds=mysql_query("SELECT * FROM `feed`") or die(mysql_error());
@@ -28,9 +33,8 @@ $select=mysql_select_db($mysql_db) or die("БД с таким именем не 
 				?>						
 				</table>
                 <br>	
-				<button name="egg_but" style="background: #fdeaa8; width: 430px; height: 40px; border-radius: 5px; box-shadow: 0px 1px 3px; font-size: 20px;"><a href="feed_add.php">Закупить корм</a></button>
-				<button name="feed_but" style="background: #fdeaa8; width: 430px; height: 40px; border-radius: 5px; box-shadow: 0px 1px 3px; font-size: 20px;"><a href="feed_delete.php">Покормить куриц</a></button>
-				<a href="logout.php">logout</a>
+				<button name="feed_but" style="background: #fdeaa8; width: 430px; height: 40px; border-radius: 5px; box-shadow: 0px 1px 3px; font-size: 20px;"><a href="feed_add.php">Закупить корм</a></button>
+				<button name="feed_but1" style="background: #fdeaa8; width: 430px; height: 40px; border-radius: 5px; box-shadow: 0px 1px 3px; font-size: 20px;"><a href="feed_delete.php">Покормить куриц</a></button>
 			 </div>
 			 
 		  </body>
